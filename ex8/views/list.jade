@@ -1,0 +1,22 @@
+extends layout
+block content
+	a.btn.btn-primary(href='/records/new') New record
+	table.table
+		tr
+			th ID
+			th Caption
+			th Value
+			th Edit
+			th Delete
+			
+		-
+		each item in list
+			tr
+				td= item.id
+				td= item.Caption
+				td= item.Value
+				td 
+					a(href='/records/#{item.id}') edit
+				td 
+					a(href='/records/#{item.id}/delete') delete
+	

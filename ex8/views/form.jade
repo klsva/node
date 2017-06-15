@@ -1,0 +1,6 @@
+extends layout
+block content
+	form(action='/records', method='POST')
+		input(type='text', placeholder='Caption', name='caption')
+		input(type='text', placeholder='Value', name='value')
+		button(type='submit') Submit

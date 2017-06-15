@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>WebSocket Echo</title>
+	
+</head>
+<body class="container">
+	<h1>WebSocket Echo</h1>
+	<script src="/socket.io/socket.io.js"></script>
+	<script>
+		var socket = io();
+		
+		socket.on('server-message', function(text) {
+			console.log(text);
+		});
+		
+		//socket.emit('message', message);
+	</script>
+</body>
+</html>

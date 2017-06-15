@@ -1,0 +1,9 @@
+extends layout
+block content
+	h1#id ID: #{item.id}
+	
+	form(action='/records', method='POST')
+		input(type='text', value='#{item.id}', name='id')
+		input(type='text', value='#{item.Caption}', name='caption')
+		input(type='text', value='#{item.Value}', name='value')
+		button(type='submit') Submit
